@@ -23,10 +23,6 @@ if official_file and newebpay_file:
         else:
             df_newebpay = pd.read_excel(newebpay_file)
         
-        # 顯示上傳的資料欄位，幫助診斷問題
-        st.write("官網下載檔案欄位:", df_official.columns.tolist())
-        st.write("藍新下載檔案欄位:", df_newebpay.columns.tolist())
-        
         # 檢查必要的欄位是否存在
         required_official_cols = ['委託單號', '付款時間', '委託金額', '身份', '姓名', '收據抬頭', 
                                  '收據統編或身分證號', '電話', '收據寄送地址', 'Email', 
